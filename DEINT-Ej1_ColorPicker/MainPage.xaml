@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="ContenidoPagina" xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DEINT_Ej1_ColorPicker.MainPage"
+             BackgroundColor="#000000">
+
+    <ScrollView>
+        
+        <Border WidthRequest="450" VerticalOptions="Center" BackgroundColor="White">
+                
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+                
+            <VerticalStackLayout Spacing="25" Padding="30, 20">
+                    
+                <Label HorizontalOptions="Center" FontSize="Medium" Text="Color Picker" TextColor="Black"></Label>
+
+                <Label HorizontalOptions="Start" FontSize="Micro" Text="Red Value" TextColor="Black"></Label>
+                <Slider x:Name="redSlider" ValueChanged="redSlider_ValueChanged" ThumbColor="Red" MaximumTrackColor="Grey" MinimumTrackColor="Red" Minimum="0" Maximum="255"></Slider>
+                <Label HorizontalOptions="Start" FontSize="Micro" Text="Blue Value" TextColor="Black"></Label>
+                <Slider x:Name="blueSlider" ValueChanged="blueSlider_ValueChanged" ThumbColor="Blue" MaximumTrackColor="Grey" MinimumTrackColor="Blue" Minimum="0" Maximum="255"></Slider>
+                <Label HorizontalOptions="Start" FontSize="Micro" Text="Green Value" TextColor="Black"></Label>
+                <Slider x:Name="greenSlider" ValueChanged="greenSlider_ValueChanged" ThumbColor="Green" MaximumTrackColor="Grey" MinimumTrackColor="Green" Minimum="0" Maximum="255"></Slider>
+                <Button x:Name="btnColor" Clicked="btnColor_Clicked" WidthRequest="120" BorderColor="Grey" Text="#000000"></Button>
+                <Button x:Name="btnRndColor" Clicked="btnRndColor_Clicked" Text="Generate Random Color" BackgroundColor="Red" TextColor="White"></Button>
+                    
+            </VerticalStackLayout>
+                
+        </Border>
+
+    </ScrollView>
+
+</ContentPage>
